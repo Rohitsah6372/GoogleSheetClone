@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <section class="options">
+        <form action="" class="form-container">
+            <button type="button" class="material-icons">undo</button>
+            <button type="button" class="material-icons">redo</button>
+            <select name="font-family" id="font-family">
+                <option value="default">Default</option>
+            </select>
+            <input type="number" name="fontSize" id="fontSize" value="16" />
+            <input type="checkbox" name="isBold" id="isBold" />
+            <label for="isBold" class="material-icons">format_bold</label>
+            <input type="checkbox" name="isItalic" id="isItalic" />
+            <label for="isItalic" class="material-icons">format_italic</label>
+            <input type="checkbox" name="isUnderlined" id="isUnderlined" />
+            <label for="isUnderlined" class="material-icons">format_underlined</label>
+            <div class="align-container fr-aic">
+                <div>
+                    <input type="radio" name="align" id="left" value="left">
+                    <label for="left" class="material-icons">format_align_left</label>
+                </div>
+                <div>
+                    <input type="radio" name="align" id="center" value="center">
+                    <label for="center" class="material-icons">format_align_center</label>
+                </div>
+                <div>
+                    <input type="radio" name="align" id="right" value="right">
+                    <label for="right" class="material-icons">format_align_right</label>
+                </div>
+            </div>
+            <div>
+                <input type="color" name="textColor" id="textColor" class="material-icons" title="Text Color"/>
+                <label for="textColor" class="material-icons">format_color_text</label>
+            </div>
+            <div>
+                <input type="color" name="backgroundColour" id="backgroundColour" title="Background Color"/>
+                <label for="backgroundColour" class="material-icons">format_color_fill</label>
+            </div>
+            <div>
+                <button type="button" class="material-icons" title="Merge Cells">merge_type</button>
+                <label for="merge_type" class="material-icons"></label>
+            </div>
+            <div>
+                <button type="button" class="material-icons" title="Borders">border_all</button>
+                <label for=""></label>
+            </div>
+            <button type="button" class="material-icons" title="Functions">functions</button>
+        </form>
+    </section>
+    <div class="container">
+        <div class="plate"></div>
+        <div class="head-row"></div>
+        <div class="serialNo"></div>
+        <div class="body"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
