@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    background-color: #ffffff; /* Sheets-like plain white background */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 50px auto;
+    height: 100vh;
+    width: 100vw;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    overflow: auto;
+}
+
+.container div {
+    position: relative;
+    border: 1px solid #e0e0e0; /* Soft gray borders like Sheets */
+}
+
+.junction {
+    background-color: #f1f3f4; /* Light gray background for junction */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    z-index: 1000;
+}
+
+.head-row {
+    grid-column: 2 / 3;
+    background-color: #f1f3f4; /* Light gray background for headers */
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.head-row .col-head {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f9fa; /* Slightly lighter gray for column headers */
+    font-weight: bold;
+}
+
+.serial-no {
+    grid-row: 2 / 3;
+    background-color: #f1f3f4;
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.serial-no .sno-col {
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.body {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #ffffff; /* White background for the main body, similar to Sheets */
+    display: flex;
+    flex-direction: column;
+}
+
+.body .row {
+    display: flex;
+}
+
+.cell {
+    width: 150px;
+    height: 30px;
+    border: 1px solid #e0e0e0; /* Subtle border like in Google Sheets */
+    outline: none;
+    cursor: text;
+    background-color: #ffffff; /* White background for cells */
+}
+
+.cell:hover {
+    background-color: #f1f3f4; /* Light gray background on hover, like Sheets */
+}
+
+.form-container {
+    padding: 10px;
+    margin: 0 30px;
+    background-color: #f1f3f4; /* Gray background for form area */
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+input[type=checkbox], input[type=radio] {
+    display: none;
+}
+
+.options {
+    background-color: #ffffff;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+input[type=checkbox]:checked + label, input[type=radio]:checked + label {
+    background-color: #cfe2f3; /* Light blue for checked options */
+}
+
+label {
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=color] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+input {
+    border-radius: 4px;
+}
+
+select {
+    border-radius: 4px;
+}
+
+.fr_alc {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box {
+    width: 90vw;
+    margin: auto;
+}
+
+.box input {
+    flex-grow: 1;
+}
+
+.selected-cell {
+    height: 20px;
+    width: 60px;
+    font-weight: bold;
+    background-color: #fff4e5;
+    padding: 6px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #d6a67a; 
+}
+
+.active-cell {
+    border: 2px solid #4285f4; 
+}
+
